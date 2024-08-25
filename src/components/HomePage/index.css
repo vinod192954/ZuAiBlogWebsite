@@ -1,0 +1,35 @@
+.banner{
+    background-color: rgba(85, 108, 103, 0.5);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 80px;
+}
+.heading{
+    font-weight: bold;
+    font-family:serif;
+    font-size: 48px;
+}
+.quote{
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+}
+
+.blogs{
+    width: 100%;
+}
+.home{
+    width: 100%;
+}
