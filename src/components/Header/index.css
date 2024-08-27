@@ -8,10 +8,15 @@
     justify-content: space-between;
     width: 100vw;
     color: #000000;
-    position: fixed;
+    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
     z-index: 1000;
+}
+
+.link-item{
+    text-decoration: none;
+    color: #000000;
 }
 
 .logo{
@@ -25,6 +30,6 @@
     list-style-type: none;
     display: flex;
     align-items: center;
-    width: 25vw;
+    width: 30vw;
     font-weight: 500;
 }

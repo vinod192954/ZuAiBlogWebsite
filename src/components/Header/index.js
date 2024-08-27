@@ -1,5 +1,5 @@
 import "./index.css"
-
+import {Link} from 'react-router-dom'
 const Header=()=>{
     return (
     
@@ -9,15 +9,21 @@ const Header=()=>{
             </div>
             <div>
                 <ul className="nav-links">
-                    <li className="m-3">
-                        Home
-                    </li>
+                    <Link to="/" className="link-item">
+                        <li className="m-3">
+                            Home
+                        </li>
+                    </Link>
+                    <Link className="link-item" to="/blogs/addBlog">
+                        <li className="m-3">Add Blog</li>
+                    </Link>
                     <li className="m-3">
                         About Us
                     </li>
                     <li className="m-3">
                         Contact Us
                     </li>
+                    
                 </ul>
             </div>
         </nav>   

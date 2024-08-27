@@ -1,5 +1,19 @@
 .popup-container{
     height: 100vh;
-    width: 650px;
-    background-color: #fbf9f9;
+    width: 100vw;
+}
+.form-container{
+    height: 100vh;
+    width: 30vw;
+   
+}
+.title-input{
+    border-radius: 5px;
+    width: 320px;
+    border:1px #a29c9c solid;
+    padding:2px;
+}
+.update-button{
+    background-color: transparent;
+    border-width: 0px;
 }

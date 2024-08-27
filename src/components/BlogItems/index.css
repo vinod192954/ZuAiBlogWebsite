@@ -2,16 +2,26 @@
     list-style-type: none;
     color: #0f0e0e;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 10px;
+    padding: 30px;
     margin: 10px;
-    height: 250px;
+    height: 280px;
     width: 650px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(31, 31, 31, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 .title{
     color: #0f0e0e;
+}
+.link-item{
+    text-decoration: none;
+}
+.delete-icon{
+    position: absolute;
+    top:8px;
+    right: 8px;
+    cursor: pointer;
 }

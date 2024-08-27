@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css'; 
+import { CiEdit } from "react-icons/ci";
 import "./index.css"
 
-const EditPopup = ({ blog, onUpdate }) => {
+const EditPopup = ({ blog, onUpdate,onEditClick }) => {
   const [title, setTitle] = useState(blog.title);
   const [excerpt, setExcerpt] = useState(blog.excerpt);
   const [content, setContent] = useState(blog.content);
@@ -33,16 +34,17 @@ const EditPopup = ({ blog, onUpdate }) => {
   };
 
   return (
-    <Popup  trigger={<button>Edit</button>} position="right center">
+    <Popup     trigger={<button className='update-button' onClick={(e) => { e.stopPropagation(); onEditClick(e); }}><CiEdit /></button>} position="right center">
       {(close) => (
-        <div>
+        <div className='form-container'>
           <h3>Edit Blog Post</h3>
-          <form onSubmit={(e) => { e.preventDefault(); handleUpdate(close); }}>
+          <form className='form-control' onSubmit={(e) => { e.preventDefault(); handleUpdate(close); }}>
             <label>
               Title:
               <input
                 type="text"
                 value={title}
+                className='m-2 title-input'
                 onChange={(e) => setTitle(e.target.value)}
               />
             </label>
@@ -51,6 +53,9 @@ const EditPopup = ({ blog, onUpdate }) => {
               Excerpt:
               <textarea
                 value={excerpt}
+                rows={8}
+                cols={35}
+                className='m-2'
                 onChange={(e) => setExcerpt(e.target.value)}
               />
             </label>
@@ -58,13 +63,22 @@ const EditPopup = ({ blog, onUpdate }) => {
             <label>
               Content:
               <textarea
+              rows={8}
+              cols={35}
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
               />
             </label>
             <br />
-            <button type="submit" disabled={loading}>
+            <button className='btn btn-primary' type="submit" disabled={loading}>
               {loading ? 'Updating...' : 'Update Blog'}
+            </button>
+            <button
+              type="button"
+              className='btn btn-secondary'
+              onClick={() => close()} // Close the popup when cancel is clicked
+            >
+              Cancel
             </button>
           </form>
         </div>
