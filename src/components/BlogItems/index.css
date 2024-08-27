@@ -5,7 +5,7 @@
     padding: 30px;
     margin: 10px;
     height: auto;
-    width: 650px;
+    width: calc(32.333% - 30px);
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(31, 31, 31, 0.3);
     display: flex;
@@ -16,8 +16,9 @@
 .title{
     color: #0f0e0e;
 }
-.link-item{
+.blog-item{
     text-decoration: none;
+    color: #000;
 }
 .delete-icon{
     position: absolute;
@@ -36,5 +37,5 @@
     .list-item p {
         font-size: 8px;
     }
-    
+
 }

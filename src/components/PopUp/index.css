@@ -1,6 +1,6 @@
-.pop-up-container{
-    height: 100vh;
-    width: 60vw;
+
+.popup-content{
+    width: 450px !important;
 }
 .form-container{
     height: 100vh;

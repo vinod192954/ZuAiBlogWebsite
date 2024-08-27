@@ -1,5 +1,5 @@
 .header-container{
-    background-color: #ffffff; 
+    background-color: #6a0ec9; 
     height: 20vh;
     box-sizing: border-box;
     padding: 10px;
@@ -7,15 +7,14 @@
     align-items: center;
     justify-content: space-between;
     width: auto;
-    color: #000000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #fff;
     margin-bottom: 20px;
     z-index: 1000;
 }
 
 .link-item{
     text-decoration: none;
-    color: #000000;
+    color: #fff;
 }
 .hamburger{
     display: none;
@@ -40,7 +39,7 @@
 }
 .active-tab li{
     text-decoration: underline;
-   text-decoration-color: #2b0fcc;
+   text-decoration-color: #fff;
 }
 
 @media screen and (max-width:769px) {

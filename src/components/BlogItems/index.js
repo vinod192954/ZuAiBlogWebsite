@@ -30,7 +30,7 @@ const BlogItems = (props) => {
   return (
     <li className="list-item">
       {/* Link wrapper for blog details */}
-      <Link to={`/blogs/${id}`} className="link-item">
+      <Link to={`/blogs/${id}`} className="blog-item">
         <h1 className="title">{title}</h1>
         <p>{excerpt}</p>
         <p>{content}  </p>

@@ -1,14 +1,18 @@
 .blogs-items{
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 .blogs-items-container{
-    height: 380vh;
     width: 100%;
-    background-color: rgb(32, 45, 91,1.0);
+    background-color: #9ec5fe;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0px 0px 1rem;
 }
 .loader{
     padding: 20px;
