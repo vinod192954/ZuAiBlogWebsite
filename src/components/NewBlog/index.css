@@ -1,6 +1,5 @@
 /* index.css */
 .New-blog-form {
-   
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -45,9 +44,23 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    
   }
   
   .New-blog-form input[type="text"] {
     width: 100%;
   }
-  
+
+  @media screen and (min-width:769px) {
+    .New-blog-form  textarea{
+      height:80vh;
+      width: 100% ;
+      font-size: 10px;
+  }
+  .New-blog-form input{
+    font-size: 12px;
+  }
+  .New-blog-form button{
+    width: 80px;
+  }
+}

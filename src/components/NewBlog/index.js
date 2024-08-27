@@ -63,7 +63,7 @@ const NewBlog=()=>{
        <>
         <div className="New-blog-form">
             <h1>New Blog</h1>
-            <form onSubmit={onSubmitToAddBlog}>
+            <form  onSubmit={onSubmitToAddBlog}>
                 <div>
                     <label>Blog Title :</label>
                     <input required onChange={onChangeTitle}  value={title} type="text" placeholder="Enter Blog Title" />
@@ -74,7 +74,8 @@ const NewBlog=()=>{
                 </div>
                 <div>
                     <label>Content :</label>
-                    <textarea required onChange={onChangeContent} value={content} rows={8} cols={50} placeholder="Content"></textarea>
+                    <br/>
+                    <textarea required onChange={onChangeContent} placeholder="Content"></textarea>
                 </div>
                 <div>
                     <label>Author :</label>
@@ -82,11 +83,13 @@ const NewBlog=()=>{
                 </div>
                 <div>
                     <label>Date of Publish : </label>
+                    <br/>
                     <input  required type="date" value={publishDate} onChange={onChangeDate}/>
                 </div>
                 <div>
                     <label>Detailed Blog :</label>
-                    <textarea onChange={onChangeDetailedBlog} value={detailedContent} rows={8} cols={55} placeholder="Enter Detailed Blog"></textarea>
+                    <br/>
+                    <textarea onChange={onChangeDetailedBlog} value={detailedContent}  placeholder="Enter Detailed Blog"></textarea>
                 </div>
                 <button className="btn btn-primary" type="submit">{isLoading ? "...Submitting" : "Submit"}</button>
             </form>

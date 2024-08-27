@@ -36,7 +36,7 @@ const Blogs=()=>{
     return (
      
         <div className='blogs-items-container'>
-            {isLoading ? (<Loader type='TailSpin' color='#fff' className="loader" height={80} width={80}/>) : (<ul className='blogs-items'>
+            {isLoading ? (<Loader type='TailSpin' color='#fff' className="loader" />) : (<ul className='blogs-items'>
               {blogsData.map((eachBlog)=>(
                 <BlogItems blog={eachBlog} key={eachBlog.id} onUpdate={handleUpdate} getBlogItems={getBlogItems} />
               ))}
