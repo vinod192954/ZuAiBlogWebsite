@@ -7,6 +7,8 @@ import "./index.css"
 const Blogs=()=>{
   const [blogsData,setBlogsData] = useState([])
   const [isLoading,setLoading] = useState(true)
+  
+
   const getBlogItems=async()=>{
     setLoading(true)
     const url="https://zuaiblog.onrender.com/posts" 

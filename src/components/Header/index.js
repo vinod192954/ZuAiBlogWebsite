@@ -1,6 +1,14 @@
-import "./index.css"
+import { useState } from 'react'
 import {Link} from 'react-router-dom'
+import "./index.css"
+
 const Header=()=>{
+    const [activeTab,setActiveTab] = useState('home')
+
+    const handleTabClick=(activeTab)=>{
+        setActiveTab(activeTab)
+    }
+
     return (
          <nav className="header-container">
             <div className="logo">
@@ -8,12 +16,12 @@ const Header=()=>{
             </div>
             <div>
                 <ul className="nav-links">
-                    <Link to="/" className="link-item">
+                    <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
                         <li className="m-3">
                             Home
                         </li>
                     </Link>
-                    <Link className="link-item" to="/blogs/addBlog">
+                    <Link onClick={() => handleTabClick('addBlog')} className={`link-item ${activeTab==='addBlog' ? 'active-tab' : ''}`} to="/blogs/addBlog">
                         <li className="m-3">Add Blog</li>
                     </Link>
                     <li className="m-3">

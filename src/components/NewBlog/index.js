@@ -9,9 +9,10 @@ const NewBlog=()=>{
     const [author,setAuthor] = useState('')
     const [publishDate,setPublishDate] = useState('')
     const [detailedContent,setDetailedContent] = useState('')
-
+    const [isLoading,setLoading] = useState(false)
     const onSubmitToAddBlog=async(event)=>{
         event.preventDefault()
+        setLoading(true)
         const userEnterDetails ={title,excerpt,content,author,publish_date:publishDate,detailed_content:detailedContent}
         const url = "https://zuaiblog.onrender.com/posts"
         const options={
@@ -23,7 +24,15 @@ const NewBlog=()=>{
         }
         const response = await fetch(url,options)
         const data = await response.json()
-        
+        if (response.ok===true){
+            setLoading(false)
+        }
+        setTitle('')
+        setExcerpt('')
+        setContent('')
+        setAuthor('')
+        setDetailedContent('')
+        setPublishDate('')
     }
 
     const onChangeTitle=(event)=>{
@@ -57,29 +66,29 @@ const NewBlog=()=>{
             <form onSubmit={onSubmitToAddBlog}>
                 <div>
                     <label>Blog Title :</label>
-                    <input onChange={onChangeTitle}  value={title} type="text" placeholder="Enter Blog Title" />
+                    <input required onChange={onChangeTitle}  value={title} type="text" placeholder="Enter Blog Title" />
                 </div>
                 <div>
                     <label>Excerpt :</label>
-                    <input onChange={onChangeExcerpt} value={excerpt} type="text" placeholder="Enter Blog Excerpt" />
+                    <input required onChange={onChangeExcerpt} value={excerpt} type="text" placeholder="Enter Blog Excerpt" />
                 </div>
                 <div>
                     <label>Content :</label>
-                    <textarea onChange={onChangeContent} value={content} rows={8} cols={50} placeholder="Content"></textarea>
+                    <textarea required onChange={onChangeContent} value={content} rows={8} cols={50} placeholder="Content"></textarea>
                 </div>
                 <div>
                     <label>Author :</label>
-                    <input onChange={onChangeAuthor} type="text" value={author} placeholder="Enter your name" />
+                    <input required onChange={onChangeAuthor} type="text" value={author} placeholder="Enter your name" />
                 </div>
                 <div>
                     <label>Date of Publish : </label>
-                    <input type="date" value={publishDate} onChange={onChangeDate}/>
+                    <input  required type="date" value={publishDate} onChange={onChangeDate}/>
                 </div>
                 <div>
                     <label>Detailed Blog :</label>
                     <textarea onChange={onChangeDetailedBlog} value={detailedContent} rows={8} cols={55} placeholder="Enter Detailed Blog"></textarea>
                 </div>
-                <button className="btn btn-primary" type="submit">Submit</button>
+                <button className="btn btn-primary" type="submit">{isLoading ? "...Submitting" : "Submit"}</button>
             </form>
             
             </div>

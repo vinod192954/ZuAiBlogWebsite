@@ -33,3 +33,7 @@
     width: 30vw;
     font-weight: 500;
 }
+.active-tab li{
+    text-decoration: underline;
+   text-decoration-color: #2b0fcc;
+}
