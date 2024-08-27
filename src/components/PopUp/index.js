@@ -34,11 +34,12 @@ const EditPopup = ({ blog, onUpdate,onEditClick }) => {
   };
 
   return (
-    <Popup     trigger={<button className='update-button' onClick={(e) => { e.stopPropagation(); onEditClick(e); }}><CiEdit  size={20}/></button>} position="right center">
+    <Popup  className='pop-up-container'  trigger={<button className='update-button' onClick={(e) => { e.stopPropagation(); onEditClick(e); }}><CiEdit  size={20}/></button>} position="right center">
       {(close) => (
         <div className='form-container'>
-          <h3>Edit Blog Post</h3>
+
           <form className='form-control' onSubmit={(e) => { e.preventDefault(); handleUpdate(close); }}>
+           <h1>Edit Blog Post</h1>
             <label>
               Title:
               <input
