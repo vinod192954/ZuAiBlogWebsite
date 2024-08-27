@@ -8,7 +8,6 @@
     justify-content: space-between;
     width: auto;
     color: #000000;
-    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
     z-index: 1000;
@@ -17,6 +16,12 @@
 .link-item{
     text-decoration: none;
     color: #000000;
+}
+.hamburger{
+    display: none;
+}
+.hamburger-links{
+    display: none;
 }
 
 .logo{
@@ -41,6 +46,40 @@
 @media screen and (max-width:769px) {
     .nav-links{
         display: none;
+        
     }
+    .header-container{
+        display: flex;
+        padding: 0px;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+    .logo h1{
+        font-size: 18px;
+    }
+    .hamburger-links{
+        list-style-type: none;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 40px 20px 10px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
+    
+    }
+    .hamburger-links li{
+        font-size: 10px;
+        
+    }
+   .cancel-btn{
+    background-color: transparent;
+    border-width: 0px;
+   
+   }
 }
 

@@ -1,12 +1,22 @@
 import { useState } from 'react'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoIosClose } from "react-icons/io";
 import {Link} from 'react-router-dom'
 import "./index.css"
 
 const Header=()=>{
     const [activeTab,setActiveTab] = useState('home')
+    const [isShow,setIsShow] = useState(false)
+    const isShowingLinks=()=>{
+        setIsShow(prevState=>!prevState)
+    }
 
     const handleTabClick=(activeTab)=>{
         setActiveTab(activeTab)
+    }
+
+    const closeNavLinks=()=>{
+        setIsShow(false)
     }
 
     return (
@@ -32,6 +42,35 @@ const Header=()=>{
                     </li>
                     
                 </ul>
+                <div className='hamburger'>
+                    {isShow ? '' : <GiHamburgerMenu onClick={isShowingLinks} />}
+                </div>
+            </div>
+            <div>
+            {isShow ? <ul className="hamburger-links">
+                    <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
+                        <li className="m-2">
+                            Home
+                        </li>
+                    </Link>
+                    <Link onClick={() => handleTabClick('addBlog')} className={`link-item ${activeTab==='addBlog' ? 'active-tab' : ''}`} to="/blogs/addBlog">
+                        <li >Add Blog</li>
+                    </Link>
+                    
+                    <li >
+                        About Us
+                    </li>
+                   
+                    <li >
+                        Contact Us
+                    </li>
+                    <button className='cancel-btn' onClick={closeNavLinks}>
+                        
+                        <IoIosClose size={10}/>
+                    </button>
+                    
+                </ul> : ''}    
+            
             </div>
         </nav>   
     
