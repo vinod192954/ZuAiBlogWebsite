@@ -23,7 +23,6 @@
 @media screen and (max-width:576px) {
     .blogs-items-container{
         width: 100%;
-        height: 910vh;
         display: flex;
         flex-wrap: wrap;
         padding: 2px;

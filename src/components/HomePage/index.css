@@ -41,14 +41,12 @@
     width: 100%;
     
 }
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     .heading{
         font-size: 20px;
     }
     .quote{
         font-size: 12px;
     }
-    .home{
-        height: 950vh;
-    }
+    
 }
