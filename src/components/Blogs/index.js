@@ -3,6 +3,7 @@ import Loader from 'react-loader-spinner'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import BlogItems from '../BlogItems'
 import "./index.css"
+
 const Blogs=()=>{
   const [blogsData,setBlogsData] = useState([])
   const [isLoading,setLoading] = useState(true)
@@ -31,15 +32,16 @@ const Blogs=()=>{
     };
 
     return (
-        <div>
-            <h1>Blogs Items</h1>
-            {isLoading ? (<Loader type='TailSpin' color='#00BFF' height={50} width={50}/>) : (<ul className='blogs-items'>
+     
+        <div className='blogs-items-container'>
+            {isLoading ? (<Loader type='TailSpin' color='#fff' className="loader" height={80} width={80}/>) : (<ul className='blogs-items'>
               {blogsData.map((eachBlog)=>(
                 <BlogItems blog={eachBlog} key={eachBlog.id} onUpdate={handleUpdate} getBlogItems={getBlogItems} />
               ))}
             </ul>)}
             
         </div>
+        
     )
 }
 

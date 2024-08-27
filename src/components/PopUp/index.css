@@ -16,4 +16,5 @@
 .update-button{
     background-color: transparent;
     border-width: 0px;
+    align-self: flex-end;
 }

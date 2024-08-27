@@ -1,7 +1,10 @@
 import "./index.css"
 import Blogs from "../Blogs"
+import Footer from "../Footer"
+
 const HomePage=()=>{
     return (
+        <>
         <div className="home">
             <div className="banner">
                 <div className="content">
@@ -10,9 +13,12 @@ const HomePage=()=>{
                 </div>
             </div>
             <div className="blogs">
-                <Blogs/>
+                <Blogs/>     
             </div>
+            
         </div>
+     <Footer/>
+     </>
     )
 }
 

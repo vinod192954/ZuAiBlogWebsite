@@ -33,7 +33,7 @@ const BlogItems = (props) => {
       <Link to={`/blogs/${id}`} className="link-item">
         <h1 className="title">{title}</h1>
         <p>{excerpt}</p>
-        <p>{content}</p>
+        <p>{content}  </p>
       </Link>
       <MdDeleteOutline className="delete-icon" size={20} onClick={() => onDeleteBlog(id)} />
       <EditPopup blog={blog} onUpdate={onUpdate} onEditClick={handleEditClick} />

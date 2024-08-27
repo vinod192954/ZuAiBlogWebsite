@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
+    width: auto;
     color: #000000;
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);

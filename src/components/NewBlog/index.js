@@ -1,4 +1,6 @@
+import Footer from '../Footer';
 import {useState} from 'react'
+
 import "./index.css"
 const NewBlog=()=>{
     const [title,setTitle]  = useState('')
@@ -49,6 +51,7 @@ const NewBlog=()=>{
     }
 
     return (
+       <>
         <div className="New-blog-form">
             <h1>New Blog</h1>
             <form onSubmit={onSubmitToAddBlog}>
@@ -78,7 +81,10 @@ const NewBlog=()=>{
                 </div>
                 <button className="btn btn-primary" type="submit">Submit</button>
             </form>
-        </div>
+            
+            </div>
+            <Footer/>
+            </>
     )
 }
 

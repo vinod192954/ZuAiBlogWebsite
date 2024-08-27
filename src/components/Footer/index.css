@@ -1,11 +1,15 @@
 .footer-container{
-    background-color: #202d5b;
-    height: 350px;
+    background-color: #000000;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    box-sizing: border-box;
-    width: auto;
+    width: 100%;
+    
+}
+.icons{
+    gap: 10px;
 }
 .follow-us-section{
     padding: 10px;

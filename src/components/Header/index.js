@@ -2,7 +2,6 @@ import "./index.css"
 import {Link} from 'react-router-dom'
 const Header=()=>{
     return (
-    
          <nav className="header-container">
             <div className="logo">
                 <h1>ZuAI</h1>

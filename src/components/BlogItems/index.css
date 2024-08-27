@@ -1,10 +1,10 @@
 .list-item{
     list-style-type: none;
     color: #0f0e0e;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     padding: 30px;
     margin: 10px;
-    height: 280px;
+    height: auto;
     width: 650px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(31, 31, 31, 0.3);

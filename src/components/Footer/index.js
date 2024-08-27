@@ -8,7 +8,7 @@ const Footer=()=>{
         <div className="footer-container">
             <div className="follow-us-section">
                 <h1>Follow us</h1>
-                 <div>
+                 <div className="icons">
                     <RiTwitterXLine color="#fff" size={20}/>
                     <FaFacebook color="#fff" size={20}/>
                     <FaLinkedin color="#fff" size={20}/>
