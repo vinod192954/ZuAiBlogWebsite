@@ -14,7 +14,7 @@ const Header=()=>{
             <div className="logo">
                 <h1>ZuAI</h1>
             </div>
-            <div>
+            <div >
                 <ul className="nav-links">
                     <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
                         <li className="m-3">

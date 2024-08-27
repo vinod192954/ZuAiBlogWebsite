@@ -37,3 +37,10 @@
     text-decoration: underline;
    text-decoration-color: #2b0fcc;
 }
+
+@media screen and (max-width:769px) {
+    .nav-links{
+        display: none;
+    }
+}
+

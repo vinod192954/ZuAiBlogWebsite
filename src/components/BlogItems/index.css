@@ -25,3 +25,16 @@
     right: 8px;
     cursor: pointer;
 }
+
+@media screen and (max-width:769px) {
+    .list-item{
+        width: 150px;
+    }
+    .list-item h1{
+        font-size: 12px;
+    }
+    .list-item p {
+        font-size: 8px;
+    }
+    
+}

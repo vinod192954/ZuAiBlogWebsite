@@ -30,8 +30,8 @@ const BlogItemDetailed=(props)=>{
     <>
         <div className="main-container">
             <div className="detailed-blog-container">
-            <h1>{detailedBlog.author}</h1>
-                <p>{detailedBlog.detailedContent}</p>
+            <h1 className="author-name">{detailedBlog.author}</h1>
+                <p className="content">{detailedBlog.detailedContent}</p>
                 <p>{detailedBlog.publishedDate}</p>
             </div>
         </div>

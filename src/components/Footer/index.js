@@ -16,8 +16,10 @@ const Footer=()=>{
             </div>
             <div className="contact-us-section">
                 <h1>Contact Us</h1>
-                
-                <p> <span><FaPhoneAlt color="#fff"/></span>+91 6281456842 </p>
+                <div className="contact">
+                    <span><FaPhoneAlt color="#fff"/></span>
+                    <p> +91 6281456842</p>
+                </div>
             </div>
             <div className="address-section">
                 <h1>Address</h1>
