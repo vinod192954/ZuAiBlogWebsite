@@ -20,6 +20,7 @@ const Header=()=>{
     }
 
     return (
+        <div>
          <nav className="header-container">
             <div className="logo">
                 <h1>ZuAI</h1>
@@ -43,11 +44,12 @@ const Header=()=>{
                     
                 </ul>
                 <div className='hamburger'>
-                    {isShow ? '' : <GiHamburgerMenu onClick={isShowingLinks} />}
+                      <GiHamburgerMenu onClick={isShowingLinks} />
                 </div>
             </div>
-            <div>
-            {isShow ? <ul className="hamburger-links">
+        </nav>  
+        <div >
+            {isShow ? <ul  className="hamburger-links-container">
                     <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
                         <li className="m-2">
                             Home
@@ -65,14 +67,13 @@ const Header=()=>{
                         Contact Us
                     </li>
                     <button className='cancel-btn' onClick={closeNavLinks}>
-                        
                         <IoIosClose size={10}/>
                     </button>
                     
                 </ul> : ''}    
             
-            </div>
-        </nav>   
+            </div> 
+        </div>
     
 )
 }

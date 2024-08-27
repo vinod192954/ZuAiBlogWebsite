@@ -19,7 +19,7 @@
 .hamburger{
     display: none;
 }
-.hamburger-links{
+.hamburger-links-container{
     display: none;
 }
 
@@ -39,7 +39,7 @@
 }
 .active-tab li{
     text-decoration: underline;
-   text-decoration-color: #fff;
+   text-decoration-color: #000;
 }
 
 @media screen and (max-width:769px) {
@@ -54,12 +54,12 @@
     .hamburger{
         display: block;
         cursor: pointer;
-        align-self: flex-start;
+       
     }
     .logo h1{
         font-size: 18px;
     }
-    .hamburger-links{
+    .hamburger-links-container{
         list-style-type: none;
         background-color: #fff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -68,17 +68,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 160px;
+        height: 80px;
+        
+        color: #000;
     
     }
-    .hamburger-links li{
-        font-size: 10px;
+    .hamburger-links-container li{
+        font-size: 5px;
+        color: #000;
         
     }
    .cancel-btn{
     background-color: transparent;
     border-width: 0px;
-   
+    position: absolute;
+     right: 20px;
+     top: 100px;
+   }
+   .link-item{
+    list-style-type: none;
    }
 }
 
