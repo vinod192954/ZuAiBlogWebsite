@@ -75,7 +75,7 @@ const NewBlog=()=>{
                 <div>
                     <label>Content :</label>
                     <br/>
-                    <textarea required onChange={onChangeContent} placeholder="Content"></textarea>
+                    <textarea value={content} required onChange={onChangeContent} placeholder="Content"></textarea>
                 </div>
                 <div>
                     <label>Author :</label>
