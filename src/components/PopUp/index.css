@@ -1,6 +1,6 @@
 
 .popup-content{
-    width: 450px;
+    width: 350px !important;
 }
 .form-container{
     height: 100%;
@@ -27,7 +27,7 @@
 
 @media screen and (max-width:769px) {
     .popup-content{
-       width: 150px; 
+       width: 189px !important; 
         
     }
     .form-container label{

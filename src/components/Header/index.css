@@ -45,7 +45,7 @@
 
 .active-tab li{
     text-decoration: underline;
-   text-decoration-color: #fff;
+   text-decoration-color: #000;
 }
 
 @media screen and (max-width:769px) {
