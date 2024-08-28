@@ -28,7 +28,7 @@ const Header=()=>{
             <div >
                 <ul className="nav-links">
                     <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
-                        <li className="m-3">
+                        <li className="m-3 ">
                             Home
                         </li>
                     </Link>
@@ -51,9 +51,11 @@ const Header=()=>{
         <div >
             {isShow ? <ul  className="hamburger-links-container">
                     <Link to="/" onClick={() => handleTabClick('home')} className={`link-item ${activeTab==='home' ? 'active-tab' : ''}`}>
-                        <li className="m-2">
+                        <li>
                             Home
+                           
                         </li>
+                       
                     </Link>
                     <Link onClick={() => handleTabClick('addBlog')} className={`link-item ${activeTab==='addBlog' ? 'active-tab' : ''}`} to="/blogs/addBlog">
                         <li >Add Blog</li>

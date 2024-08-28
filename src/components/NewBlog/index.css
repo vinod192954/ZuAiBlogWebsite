@@ -4,8 +4,9 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 400px;
     margin: 20px auto;
+    min-width: 200px;
 
   }
   
@@ -62,5 +63,8 @@
   }
   .New-blog-form button{
     width: 80px;
+  }
+  .new-blog-heading{
+    font-size: 14px;
   }
 }

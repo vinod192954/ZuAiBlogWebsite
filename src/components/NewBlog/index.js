@@ -62,7 +62,7 @@ const NewBlog=()=>{
     return (
        <>
         <div className="New-blog-form">
-            <h1>New Blog</h1>
+            <h1 className='new-blog-heading'>New Blog</h1>
             <form  onSubmit={onSubmitToAddBlog}>
                 <div>
                     <label>Blog Title :</label>

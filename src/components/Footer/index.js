@@ -18,7 +18,7 @@ const Footer=()=>{
                 <h1>Contact Us</h1>
                 <div className="contact">
                     <span><FaPhoneAlt color="#fff"/></span>
-                    <p> +91 6281456842</p>
+                    <p className="phone-number"> +91 6281456842</p>
                 </div>
             </div>
             <div className="address-section">

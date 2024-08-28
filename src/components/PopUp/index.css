@@ -1,15 +1,15 @@
 
 .popup-content{
-    width: 450px !important;
+    width: 450px;
 }
 .form-container{
-    height: 100vh;
+    height: 100%;
     width: 100%;
    
 }
 .title-input{
     border-radius: 5px;
-    width: 320px;
+    width: 100%;
     border:1px #a29c9c solid;
     padding:2px;
 }
@@ -17,4 +17,44 @@
     background-color: transparent;
     border-width: 0px;
     align-self: flex-end;
+}
+.content-container{
+    width: 100%;
+}
+.user-excerpt{
+    width: 100%;
+}
+
+@media screen and (max-width:769px) {
+    .popup-content{
+       width: 150px; 
+        
+    }
+    .form-container label{
+        font-size: 14px;
+    }
+    .user-excerpt{
+        width: 100%;
+        font-size: 12px;
+    }
+    .title-input{
+        width: 100%;
+        font-size: 12px;
+    }
+    .content-container{
+        width: 100%;
+        font-size: 12px;
+    }
+   
+    .close-button{
+        font-size: 5px;
+
+    }
+    .form-heading{
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .submit-button{
+        font-size: 10px;
+    }
 }

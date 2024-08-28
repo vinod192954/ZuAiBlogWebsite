@@ -39,7 +39,7 @@ const EditPopup = ({ blog, onUpdate,onEditClick }) => {
         <div className='form-container'>
 
           <form className='form-control' onSubmit={(e) => { e.preventDefault(); handleUpdate(close); }}>
-           <h1>Edit Blog Post</h1>
+           <h1 className='form-heading'>Edit Blog Post</h1>
             <label>
               Title:
               <input
@@ -52,31 +52,36 @@ const EditPopup = ({ blog, onUpdate,onEditClick }) => {
             <br />
             <label>
               Excerpt:
+              </label>
+              <br/>
               <textarea
                 value={excerpt}
                 rows={8}
                 cols={35}
-                className='m-2'
+                className='m-2 user-excerpt'
                 onChange={(e) => setExcerpt(e.target.value)}
               />
-            </label>
+           
             <br />
             <label>
               Content:
+              </label> 
+              <br/>
               <textarea
               rows={8}
               cols={35}
-                value={content}
+              value={content}
+              className='content-container'
                 onChange={(e) => setContent(e.target.value)}
               />
-            </label>
+           
             <br />
-            <button className='btn btn-primary' type="submit" disabled={loading}>
+            <button className='btn btn-primary m-1 submit-button' type="submit" disabled={loading}>
               {loading ? 'Updating...' : 'Update Blog'}
             </button>
             <button
               type="button"
-              className='btn btn-secondary'
+              className='btn btn-secondary m-1 close-button'
               onClick={() => close()} // Close the popup when cancel is clicked
             >
               Cancel
